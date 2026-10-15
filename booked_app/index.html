@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booked. — Learn, Explore, Grow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" onclick="showHome(); return false;">
+      <span class="brand-mark" aria-hidden="true"><span>📘</span><span>📙</span><span>📗</span></span>
+      <span>Booked<span class="brand-dot">.</span></span>
+    </a>
+    <nav>
+      <button class="nav-link active" onclick="showHome()">⌂ <span>Home</span></button>
+      <button class="nav-link" onclick="showLibrary()">▣ <span>My Library</span><span id="library-count" class="count">0</span></button>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section id="home-view">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">YOUR CAMPUS LEARNING COMPANION</p>
+          <h1>Hey there,<br><span>future engineer!</span></h1>
+          <p class="hero-subtitle">Learn something new. Build something great.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="spark">✦</div><div class="book-stack"><i></i><i></i><i></i></div>
+          <p>Better books.<br>Brighter future.</p>
+        </div>
+      </div>
+
+      <label class="searchbox">
+        <span>⌕</span>
+        <input id="search-input" type="search" placeholder="Search subject, book, author..." autocomplete="off">
+        
+      </label>
+      <div id="search-results" class="search-results hidden"></div>
+
+      <section class="content-section">
+        <div class="section-heading"><div><p class="eyebrow">FIND YOUR PATH</p><h2>Browse by branch</h2></div><button class="text-button" onclick="showAllBranches()">View all <span>→</span></button></div>
+        <div id="branch-list" class="branch-grid"></div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading"><div><p class="eyebrow">POPULAR RIGHT NOW</p><h2>Popular subjects</h2></div><button class="text-button" onclick="showAllSubjects()">Explore subjects <span>→</span></button></div>
+        <div id="popular-subjects" class="subject-grid"></div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading"><div><p class="eyebrow">PICK UP A GOOD READ</p><h2>Recommended reads</h2></div></div>
+        <div id="recommended-books" class="book-grid"></div>
+      </section>
+    </section>
+
+    <section id="content-view" class="hidden"></section>
+  </main>
+
+  <footer><span class="footer-logo">📚 Booked.</span>Developed by Rimsha, Mayuri, Riteka<span>Learn · Explore · Grow</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
